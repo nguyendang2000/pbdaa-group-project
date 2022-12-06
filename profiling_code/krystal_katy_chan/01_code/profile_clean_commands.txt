@@ -1,0 +1,6 @@
+javac -classpath `yarn classpath`:. -d . CountRecs.java
+javac -classpath `yarn classpath`:. -d . CountRecsMapper.java
+javac -classpath `yarn classpath`:. -d . CountRecsReducer.java
+jar -cvf countRecs.jar *.class
+hadoop jar countRecs.jar CountRecs project/input/retail_food_stores_clean.csv /user/kkc368/project/retail_food_stores_clean_count
+hdfs dfs -cat project/retail_food_stores_clean_count/part-r-00000

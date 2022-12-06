@@ -1,0 +1,72 @@
+[nd1663@hlog-2 nd1663]$ spark-shell --deploy-mode client
+Setting default log level to "WARN".
+To adjust logging level use sc.setLogLevel(newLevel). For SparkR, use setLogLevel(newLevel).
+22/11/27 17:42:08 WARN util.Utils: Service 'SparkUI' could not bind on port 4040. Attempting port 4041.
+22/11/27 17:42:08 WARN util.Utils: Service 'SparkUI' could not bind on port 4041. Attempting port 4042.
+22/11/27 17:42:08 WARN util.Utils: Service 'SparkUI' could not bind on port 4042. Attempting port 4043.
+22/11/27 17:42:08 WARN util.Utils: Service 'SparkUI' could not bind on port 4043. Attempting port 4044.
+Spark context Web UI available at http://hlog-2.hpc.nyu.edu:4044
+Spark context available as 'sc' (master = yarn, app id = application_1653405993800_6110).
+Spark session available as 'spark'.
+Welcome to
+      ____              __
+     / __/__  ___ _____/ /__
+    _\ \/ _ \/ _ `/ __/  '_/
+   /___/ .__/\_,_/_/ /_/\_\   version 2.4.0-cdh6.3.4
+      /_/
+         
+Using Scala version 2.11.12 (Java HotSpot(TM) 64-Bit Server VM, Java 1.8.0_181)
+Type in expressions to have them evaluated.
+Type :help for more information.
+
+scala> :load MedianIncomeProfiling.scala
+Loading MedianIncomeProfiling.scala...
+NYC 2020 MEDIAN INCOME DATA PROFILING
+                                                                                
+Number of records (with header): 262
+Number of columns: 81
+Number of records (excluding header): 261
+
+Number of records where income data is not available, by category:
+Median income (dollars): 36
+Median income (dollars)!!HOUSEHOLD INCOME BY RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER!!Households!!One race--!!White: 36
+Median income (dollars)!!HOUSEHOLD INCOME BY RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER!!Households!!One race--!!Black or African American: 69
+Median income (dollars)!!HOUSEHOLD INCOME BY RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER!!Households!!One race--!!American Indian and Alaska Native: 203
+Median income (dollars)!!HOUSEHOLD INCOME BY RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER!!Households!!One race--!!Asian: 65
+Median income (dollars)!!HOUSEHOLD INCOME BY RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER!!Households!!One race--!!Native Hawaiian and Other Pacific Islander: 259
+Median income (dollars)!!HOUSEHOLD INCOME BY RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER!!Households!!One race--!!Some other race: 86
+Median income (dollars)!!HOUSEHOLD INCOME BY RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER!!Households!!Two or more races: 98
+Median income (dollars)!!HOUSEHOLD INCOME BY RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER!!Households!!Hispanic or Latino origin (of any race): 54
+Median income (dollars)!!HOUSEHOLD INCOME BY RACE AND HISPANIC OR LATINO ORIGIN OF HOUSEHOLDER!!Households!!White alone-not Hispanic or Latino: 45
+Median income (dollars)!!HOUSEHOLD INCOME BY AGE OF HOUSEHOLDER!!15 to 24 years: 122
+Median income (dollars)!!HOUSEHOLD INCOME BY AGE OF HOUSEHOLDER!!25 to 44 years: 45
+Median income (dollars)!!HOUSEHOLD INCOME BY AGE OF HOUSEHOLDER!!45 to 64 years: 41
+Median income (dollars)!!HOUSEHOLD INCOME BY AGE OF HOUSEHOLDER!!65 years and over: 49
+Median income (dollars)!!FAMILIES!!Families: 42
+Median income (dollars)!!FAMILIES!!Families!!With own children of householder under 18 years: 41
+Median income (dollars)!!FAMILIES!!Families!!With no own children of householder under 18 years: 47
+Median income (dollars)!!FAMILIES!!Families!!Married-couple families: 40
+Median income (dollars)!!FAMILIES!!Families!!Married-couple families!!With own children under 18 years: 57
+Median income (dollars)!!FAMILIES!!Families!!Female householder-no spouse present: 56
+Median income (dollars)!!FAMILIES!!Families!!Female householder-no spouse present!!With own children under 18 years: 73
+Median income (dollars)!!FAMILIES!!Families!!Male householder-no spouse present: 85
+Median income (dollars)!!FAMILIES!!Families!!Male householder-no spouse present!!With own children under 18 years: 124
+Median income (dollars)!!FAMILY INCOME BY FAMILY SIZE!!2-person families: 69
+Median income (dollars)!!FAMILY INCOME BY FAMILY SIZE!!3-person families: 70
+Median income (dollars)!!FAMILY INCOME BY FAMILY SIZE!!4-person families: 51
+Median income (dollars)!!FAMILY INCOME BY FAMILY SIZE!!5-person families: 58
+Median income (dollars)!!FAMILY INCOME BY FAMILY SIZE!!6-person families: 86
+Median income (dollars)!!FAMILY INCOME BY FAMILY SIZE!!7-or-more person families: 118
+Median income (dollars)!!FAMILY INCOME BY NUMBER OF EARNERS!!No earners: 90
+Median income (dollars)!!FAMILY INCOME BY NUMBER OF EARNERS!!1 earner: 82
+Median income (dollars)!!FAMILY INCOME BY NUMBER OF EARNERS!!2 earners: 55
+Median income (dollars)!!FAMILY INCOME BY NUMBER OF EARNERS!!3 or more earners: 74
+Median income (dollars)!!NONFAMILY HOUSEHOLDS!!Nonfamily households: 54
+Median income (dollars)!!NONFAMILY HOUSEHOLDS!!Nonfamily households!!Female householder: 75
+Median income (dollars)!!NONFAMILY HOUSEHOLDS!!Nonfamily households!!Female householder!!Living alone: 79
+Median income (dollars)!!NONFAMILY HOUSEHOLDS!!Nonfamily households!!Female householder!!Not living alone: 68
+Median income (dollars)!!NONFAMILY HOUSEHOLDS!!Nonfamily households!!Male householder: 62
+Median income (dollars)!!NONFAMILY HOUSEHOLDS!!Nonfamily households!!Male householder!!Living alone: 73
+Median income (dollars)!!NONFAMILY HOUSEHOLDS!!Nonfamily households!!Male householder!!Not living alone: 75
+
+scala> System.exit(0)

@@ -1,0 +1,1 @@
+Zip Code,Number of Households,Median income (dollars)

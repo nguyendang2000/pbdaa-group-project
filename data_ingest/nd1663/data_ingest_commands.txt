@@ -1,0 +1,8 @@
+// From local directory containing the raw dataset
+scp median_income_raw_data.csv nd1663@peel.hpc.nyu.edu:/home/nd1663/
+
+// Connect to peel remote
+ssh nd1663@peel.hpc.nyu.edu
+
+// Put the raw data into HDFS
+hdfs dfs -put ./median_income_raw_data.csv /user/nd1663/project/datasets/

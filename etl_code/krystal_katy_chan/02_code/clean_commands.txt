@@ -1,0 +1,5 @@
+javac -classpath `yarn classpath`:. -d . Clean2.java
+javac -classpath `yarn classpath`:. -d . CleanMapper2.java
+jar -cvf clean2.jar *.class
+hadoop jar clean2.jar Clean2 project/input/retail_food_stores.csv /user/kkc368/project/input/retail_food_stores_clean.csv 
+hdfs dfs -cat project/input/retail_food_stores_clean.csv/part-r-00000

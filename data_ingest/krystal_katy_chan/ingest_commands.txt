@@ -1,0 +1,1 @@
+hdfs dfs -put retail_food_stores.csv project/input
